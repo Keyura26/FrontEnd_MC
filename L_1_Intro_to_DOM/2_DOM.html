@@ -29,53 +29,60 @@
         debitis vel natus nobis? Doloribus fugit vitae veritatis esse! Cumque odio quasi sapiente quisquam est! Odio!
     </p>
 
-    <input type="text">
-    <input type="password" id="special">
-    <input type="text">
+    <input type="text"/>
+    <input type="password" id="special"/>
+    <input type="text"/>
     <button>click</button>
 
 
     <script>
 
         /****read**************************/
-        // returns first element ->using css selectors 
-        // const h1 = document.querySelector("h1");
-        // console.log(h1);
-        // let inputPass = document
-        //     .querySelector("input[type='password']")
-        //     console.log(inputPass);
+        // returns first element ->using css selectors (we need to pass css selectors)
+        const h1 = document.querySelector("h1");
+        console.log(h1);
+       
+        let inputPass = document
+            .querySelector("input[type='password']")
+            console.log(inputPass);
+       
         // returns all the  element ->using css selectors 
         const h1Arr = document.querySelectorAll("h1");
         console.log(h1Arr);
         // indexing
-        // console.log(h1Arr[0]);
-        // console.log(h1Arr[1]);
+        console.log(h1Arr[0]);
+        console.log(h1Arr[1]);
+       
         // // hof -> forEach
         // h1Arr.forEach((elem) => {
         //     console.log(elem.textContent);
         // })
-        // Note : you get a nodeList from querySelectorAll 
+        // Note : you get a nodeList from querySelectorAll which can do indexing
         // node list has few features similar to an array-> length, foreach
         //  but it  is not an array
 
+        //**************************//
+        // In JS we have class keyword which represents the class name
+        // document.getElementsByClassName
         const allelems = document.getElementsByClassName("para");
-        // console.log(allelems);
+        console.log(allelems);
         // console.log(allelems[0]);
-        // console.log(allelems[1]);
-
+        // console.log(allelems[1]);  // these are accessible but we cannott do foreach here
+        // In this case we get HTML collection
 
         /***
          * 
-         * when you are dong a read operation for an elemnet -> nodelist , html collection 
+         * when you are dong a read operation for an element -> nodelist , html collection 
         and both are array like but not array
          * */
 
 
-        //  convert nodelist/HTMLcollection Array
+        //  convert nodelist/HTMLcollection into Array
 
         const newH1Arr = Array.from(h1Arr);
         console.log(newH1Arr);
 
+        //  Attribute is something which is not visible to the user and its present in the opening of the tag
 
 
 
