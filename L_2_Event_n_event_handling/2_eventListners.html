@@ -33,22 +33,23 @@
         // box.onclick = function () {
         //     alert("I was clicked");
         // }
-        // box.onclick = function () {
-        //     alert("I am fake");
+        // box.onclick = function () {      //If we use onclick for next time the last one will be
+        //     alert("I am fake");          // taken into consideration so we can use it only once
         // }
         /*******************2.eventListener****************************/
-        // box.addEventListener("click", () => {
-        //     console.log("I was clicked");
-        // })
-        //  box.addEventListener("click", () => {
-        //         console.log("I was fake");
-        //     })
+        box.addEventListener("click", () => {
+            console.log("I was clicked");
+        })
+         box.addEventListener("click", () => {
+                console.log("I was fake");
+            })
 
 
-        box.addEventListener("click", cb,{once:true});
+        // box.addEventListener("click", cb);
+
+        // ,{once:true}
         
-        
-        
+        box.addEventListener("click", cb,{once:true});    // click is an event
         
         
         
