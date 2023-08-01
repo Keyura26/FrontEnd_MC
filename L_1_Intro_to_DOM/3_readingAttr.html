@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="hifine"> I am h1</h1>
+    <h1> I am another</h1>
+    <h2> I am h1</h2>
+    <h3> I am h1</h3>
+    <div id="unique">
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet inventore adipisci dignissimos
+            voluptatibus ad
+            debitis vel natus nobis? Doloribus fugit vitae veritatis esse! Cumque odio quasi sapiente quisquam est!
+            Odio!
+        </p>
+        <p class="para" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet inventore
+            adipisci dignissimos
+            voluptatibus ad
+            debitis vel natus nobis? Doloribus fugit vitae veritatis esse! Cumque odio quasi sapiente quisquam est!
+            Odio!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet inventore adipisci dignissimos voluptatibus ad
+            debitis vel natus nobis? Doloribus fugit vitae veritatis esse! Cumque odio quasi sapiente quisquam est!
+            Odio!
+        </p>
+    </div>
+
+    <input type="text">
+    <input type="password" id="special">
+    <input type="text">
+    <button>click</button>
+    <script>
+
+        /**************content****************/
+        
+        let div = document.querySelector("div");
+         console.log("innerHtml",div.innerHTML);  //all the text along with tags
+        
+         // only visible text is displayed in innerText style="display: none;" hides the particular element
+        console.log("innerText", div.innerText);  //only the text inside tags
+        console.log("````````````````````");
+        
+        // //  all the text inside an element is visible-> even if it is hidden hidden
+        console.log("textcontent",div.textContent);
+        // console.log(div);
+
+       /*****************************************/
+       let div1 = document.querySelectorAll("div");
+       console.log(div1);  //gives a node list
+       
+        /***************styling**************************/
+        //All the properties related to styling is added to sub properties that starts from div
+        div.style.backgroundColor = "lightyellow";
+        div.style.color = "red";
+        
+        /******************attribute****************************/
+        const idName = div.getAttribute("id");
+        console.log(idName);
+        
+        const input = document.getElementById("special");
+        console.log(input);
+        const type=input.getAttribute("type");
+         input.setAttribute("type", "email");
+        console.log(type);
+    </script>
+
+</body>
+
+</html>
