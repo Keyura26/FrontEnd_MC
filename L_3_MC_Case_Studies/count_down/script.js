@@ -25,10 +25,11 @@ let prevTimer = 0;
 let timerId;
 let prevInsecs;
 let timeInSeconds;
+let flag;
 
 
 pauseBtn.addEventListener("click", function () {
-    prevInsecs = timeInSeconds
+    prevInsecs = flag
     clearTimeout(timerId);
 })
 
@@ -65,6 +66,7 @@ function timer(timeInSeconds) {
     timerId = setTimeout(() => {
         console.log("Timer clocked", timeInSeconds);
         timeInSeconds--;
+        flag = timeInSeconds;
         timer(timeInSeconds);
     }, 1000)
 }
