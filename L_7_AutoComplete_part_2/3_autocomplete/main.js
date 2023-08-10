@@ -64,7 +64,7 @@ function debounce(fn, delay = 1000) {
     }
 }
 
-inputBox.addEventListener("input", debounce(handleSuggestions));
+inputBox.addEventListener("input", handleSuggestions);
 
 // if interval b/w two subseqnet key press is more than delay then only i will call it again
 
